@@ -272,3 +272,59 @@ const myConstWithoutArrowThisObject={
     }
 }
 console.log(myConstWithoutArrowThisObject.getName()); //TejaReddy
+
+
+//JSON
+
+let newEmp ={
+    "employees":[
+      {"firstName":"John", "lastName":"Doe"},
+      {"firstName":"Anna", "lastName":"Smith"},
+      {"firstName":"Peter", "lastName":"Jones"}
+    ]
+    }
+
+    console.log(newEmp.toString()); // [object object]
+
+    console.log(JSON.stringify(newEmp));
+
+    console.log(JSON.parse((JSON.stringify(newEmp)).replace("firstName","name")));
+
+    let newMyEmp={
+    employees:[
+      {firstName:"John", lastName:"Doe"},
+      {firstName:"Anna", lastName:"Smith"},
+      {firstName:"Peter", lastName:"Jones"}
+    ]
+    }
+
+    newMyEmp.employees.map((x)=>console.log(x));
+
+    //forms
+    console.log(document.forms['myForm']['fname'].value);
+
+
+    //Advanced JS
+
+var newObjectJs= new Object();
+console.log(newObjectJs); //{}
+
+newObjectJs={
+    name:"Teja",
+    age:30
+}
+console.log(newObjectJs); // {name: "Teja", age: 30}
+
+var againNewObjectJs=Object.assign({},newObjectJs); // Object.assign({}) -->{}
+console.log(againNewObjectJs);// {name: "Teja", age: 30}
+
+newObjectJs.name="vinod";
+console.log(newObjectJs);//{name: "vinod", age: 30}
+console.log(againNewObjectJs);//{name: "Teja", age: 30}
+
+var newAgainNewObjectJs=newObjectJs;
+console.log(newAgainNewObjectJs);//{name: "vinod", age: 30}
+newObjectJs.name="ram";
+console.log(newAgainNewObjectJs); //{name: "ram", age: 30}
+
+var person = {fname:"John", lname:"Doe", age:25};
